@@ -836,7 +836,7 @@ export const products = [
     subCategory: "Topwear",
     sizes: ["S", "M", "L", "XL"],
     date: 1716651945448,
-    bestseller: false,
+    bestseller: true,
   },
   {
     _id: "aaaby",
@@ -849,7 +849,7 @@ export const products = [
     subCategory: "Winterwear",
     sizes: ["S", "M", "L", "XL"],
     date: 1716667345448,
-    bestseller: false,
+    bestseller: true,
   },
   {
     _id: "aaabd",
@@ -875,7 +875,7 @@ export const products = [
     subCategory: "Topwear",
     sizes: ["S", "M", "L", "XL"],
     date: 1716647545448,
-    bestseller: false,
+    bestseller: true,
   },
   //   {
   //     _id: "aaabp",
