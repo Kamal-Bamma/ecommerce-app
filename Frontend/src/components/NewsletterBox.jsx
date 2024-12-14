@@ -3,8 +3,7 @@ import React from "react";
 export default function NewsletterBox() {
   return (
     <div className="text-center">
-      {" "}
-      <p className="text-2xl fonnt-medium text-gray-800">Message to a owner</p>
+      <p className="text-2xl fonnt-medium text-gray-800">Message to a Owner</p>
       <p className="text-gray-400 mt-3">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit Porro quos
         possimu.
