@@ -8,9 +8,13 @@ export const ShopContext = createContext();
 const ShopContextProvider = (props) => {
   const currency = "Rs";
   const delivery_fee = 10;
+  const backendUrl =
+    import.meta.env.VITE_BACKEND_URL || "http://localhost:4000";
+
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(false);
   const [cartItems, setCartItems] = useState({});
+  const [token, setToken] = useState("");
   const navigate = useNavigate();
 
   const addToCart = async (itemId, size) => {
@@ -51,9 +55,7 @@ const ShopContextProvider = (props) => {
 
   const updateQuantity = async (itemId, size, quantity) => {
     let cartData = structuredClone(cartItems);
-
     cartData[itemId][size] = quantity;
-
     setCartItems(cartData);
   };
 
@@ -72,6 +74,12 @@ const ShopContextProvider = (props) => {
     return totalAmount;
   };
 
+  useEffect(() => {
+    if (!token && localStorage.getItem("token")) {
+      setToken(localStorage.getItem("token"));
+    }
+  }, []);
+
   const value = {
     products,
     currency,
@@ -81,14 +89,20 @@ const ShopContextProvider = (props) => {
     showSearch,
     setShowSearch,
     cartItems,
+    setCartItems,
     addToCart,
     getCartCount,
     updateQuantity,
     getCartAmount,
     navigate,
+    backendUrl,
+    setToken,
+    token,
   };
+  // console.log("ShopContext backendUrl:", backendUrl); // Debug log
   return (
     <ShopContext.Provider value={value}>{props.children}</ShopContext.Provider>
   );
 };
+
 export default ShopContextProvider;
