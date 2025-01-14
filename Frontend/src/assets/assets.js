@@ -53,6 +53,13 @@ import p_img49 from "./p_img49.png";
 import p_img50 from "./p_img50.png";
 import p_img51 from "./p_img51.png";
 import p_img52 from "./p_img52.png";
+import p_img53 from "./p_img53.png";
+import p_img54 from "./p_img54.png";
+import p_img55 from "./p_img55.png";
+import p_img56 from "./p_img56.png";
+import p_img57 from "./p_img57.png";
+import p_img58 from "./p_img58.png";
+import p_img59 from "./p_img59.png";
 
 import logo from "./logo.png";
 import hero_img from "./hero_img.png";
@@ -718,6 +725,19 @@ export const assets = {
 //         date: 1716668445448,
 //         bestseller: false
 //     }
+//   {
+//     _id: "aaabp",
+//     name: "Boy Round Neck Pure Cotton T-shirt",
+//     description:
+//       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+//     price: 300,
+//     image: [p_img42],
+//     category: "Kids",
+//     subCategory: "Topwear",
+//     sizes: ["S", "M", "L", "XL"],
+//     date: 1716657445448,
+//     bestseller: false,
+//   },
 
 // ]
 export const products = [
@@ -877,19 +897,7 @@ export const products = [
     date: 1716647545448,
     bestseller: true,
   },
-  //   {
-  //     _id: "aaabp",
-  //     name: "Boy Round Neck Pure Cotton T-shirt",
-  //     description:
-  //       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
-  //     price: 300,
-  //     image: [p_img42],
-  //     category: "Kids",
-  //     subCategory: "Topwear",
-  //     sizes: ["S", "M", "L", "XL"],
-  //     date: 1716657445448,
-  //     bestseller: false,
-  //   },
+
   {
     _id: "aaabq",
     name: "Kid Tapered Slim Fit Trouser",
@@ -899,6 +907,93 @@ export const products = [
     image: [p_img43],
     category: "Kids",
     subCategory: "Bottomwear",
+    sizes: ["S", "M", "L", "XL"],
+    date: 1716658545448,
+    bestseller: false,
+  },
+
+  {
+    _id: "aaakb",
+    name: "Heels that looks good on you",
+    description: "A lightweight, very comfy, looks good on your foot",
+    price: 500,
+    image: [p_img53],
+    category: "Women",
+    subCategory: "Heels",
+    sizes: ["S", "M", "L", "XL"],
+    date: 1716658545448,
+    bestseller: false,
+  },
+  {
+    _id: "aaakc",
+    name: "Heels that looks good on you",
+    description: "A lightweight, very comfy, looks good on your foot",
+    price: 500,
+    image: [p_img54],
+    category: "Women",
+    subCategory: "Heels",
+    sizes: ["S", "M", "L", "XL"],
+    date: 1716658545448,
+    bestseller: true,
+  },
+
+  {
+    _id: "aaakc",
+    name: "Heels that looks good on you",
+    description: "A lightweight, very comfy, looks good on your foot",
+    price: 500,
+    image: [p_img55],
+    category: "Women",
+    subCategory: "Heels",
+    sizes: ["S", "M", "L", "XL"],
+    date: 1716658545448,
+    bestseller: true,
+  },
+
+  {
+    _id: "aaake",
+    name: "Heels that looks good on you",
+    description: "A lightweight, very comfy, looks good on your foot",
+    price: 500,
+    image: [p_img56],
+    category: "Women",
+    subCategory: "Heels",
+    sizes: ["S", "M", "L", "XL"],
+    date: 1716658545448,
+    bestseller: false,
+  },
+  {
+    _id: "aaakf",
+    name: "Heels that looks good on you",
+    description: "A lightweight, very comfy, looks good on your foot",
+    price: 500,
+    image: [p_img57],
+    category: "Women",
+    subCategory: "Heels",
+    sizes: ["S", "M", "L", "XL"],
+    date: 1716658545448,
+    bestseller: false,
+  },
+  {
+    _id: "aaakf",
+    name: "Heels that looks good on you",
+    description: "A lightweight, very comfy, looks good on your foot",
+    price: 500,
+    image: [p_img58],
+    category: "Women",
+    subCategory: "Heels",
+    sizes: ["S", "M", "L", "XL"],
+    date: 1716658545448,
+    bestseller: true,
+  },
+  {
+    _id: "aaakf",
+    name: "Heels that looks good on you",
+    description: "A lightweight, very comfy, looks good on your foot",
+    price: 500,
+    image: [p_img59],
+    category: "Women",
+    subCategory: "Heels",
     sizes: ["S", "M", "L", "XL"],
     date: 1716658545448,
     bestseller: false,

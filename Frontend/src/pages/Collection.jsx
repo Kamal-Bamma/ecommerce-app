@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { assets, products } from "./../assets/assets";
+import { assets, products } from "../assets/assets";
 import { ShopContext } from "../context/ShopContext";
 import Title from "../components/Title";
 import ProductItem from "../components/ProductItem";
@@ -29,27 +29,28 @@ const Collection = () => {
   const applyFilterCategory = () => {
     let productsCopy = products.slice();
 
+    // Apply search filter if applicable
     if (showSearch && search) {
       productsCopy = productsCopy.filter((item) =>
         item.name.toLowerCase().includes(search.toLowerCase())
       );
     }
-    // console.log(productsCopy);
-    // console.log("outside if ");
+
+    // Apply subcategory and bestseller filters
     if (subCategory.length > 0) {
-      // console.log("inside if");
-      productsCopy = productsCopy.filter(
-        (item) =>
-          subCategory.includes(item.subCategory) &&
-          item.bestseller === bestSeller
+      productsCopy = productsCopy.filter((item) =>
+        subCategory.includes(item.subCategory)
       );
-    } else {
+    }
+
+    // Apply bestseller filter
+    if (bestSeller) {
       productsCopy = productsCopy.filter(
         (item) => item.bestseller === bestSeller
       );
     }
-    // console.log(productsCopy);
 
+    // Update the filtered products
     setFilterProducts(productsCopy);
   };
 
@@ -125,7 +126,7 @@ const Collection = () => {
             showFilter ? " " : "hidden"
           } sm:block`}
         >
-          <p className="mb-3 text-sm font-medium">Type</p>
+          <p className="mb-3 text-sm font-medium">Clothing</p>
           <div className=" flex flex-col gap-2 text-sm font-light text-gray-700">
             <p className="flex gap-2">
               <input
@@ -153,6 +154,44 @@ const Collection = () => {
                 onChange={toggleSubCategory}
               />
               Winterwear
+            </p>
+          </div>
+        </div>
+
+        <div
+          className={`border border-gray-300 pl-5 py-3 mt-6 ${
+            showFilter ? " " : "hidden"
+          } sm:block`}
+        >
+          <p className="mb-3 text-sm font-medium">Footwear</p>
+          <div className=" flex flex-col gap-2 text-sm font-light text-gray-700">
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Heels"}
+                onChange={toggleSubCategory}
+              />
+              Heels
+            </p>
+          </div>
+        </div>
+
+        <div
+          className={`border border-gray-300 pl-5 py-3 mt-6 ${
+            showFilter ? " " : "hidden"
+          } sm:block`}
+        >
+          <p className="mb-3 text-sm font-medium">Accessories</p>
+          <div className=" flex flex-col gap-2 text-sm font-light text-gray-700">
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Jhumka"}
+                onChange={toggleSubCategory}
+              />
+              Jhumka
             </p>
           </div>
         </div>
